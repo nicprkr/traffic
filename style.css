@@ -1,0 +1,234 @@
+/* Variables */
+:root {
+    --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --yellow: #FAD02C;
+    --black: #282120;
+    --cream: #fff9f2;
+    --blue: #228aab;
+   /*  --pink: #ff61cf; */
+
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+* {
+    margin: 0;
+  }
+
+  html, body {
+    height: 100%;
+  }
+ a {
+     /* color: var(--pink); */
+     font-weight: bold;
+     color: var(--blue);
+     opacity: 1;
+     transition: 0.2s;
+ }
+ a:not([class]):hover {
+     opacity: 0.85;
+ }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: var(--font);
+    color: var(--black);
+    background-color: var(--cream);
+  }
+
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  input, button, textarea, select {
+    font: inherit;
+  }
+
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+  #root, #__next {
+    isolation: isolate;
+  }
+  section {
+      padding: 2rem 1rem 0 1rem;
+  }
+  section:last-of-type {
+      padding: 2rem 1rem;
+  }
+  .announcement {
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+    background: var(--black);
+    color: var(--cream);
+  }
+
+  h1 {
+      font-size: 2.5rem;
+      line-height: 1;
+  }
+  .subtitle {
+    font-size: 1rem;
+    font-weight: 100;
+    text-transform: capitalize;
+
+}
+  h2 {
+    margin-bottom: 1rem;
+    position: relative;
+    font-size: 2rem;
+    font-weight: 100;
+    letter-spacing: 1px;
+  }
+  h2::after {
+    content: '';
+    display: block;
+
+    border-radius: 0 15px 15px 0;
+    background: var(--yellow);
+    position: absolute;
+    z-index: -1;
+    height: 20%;
+    left: -3.95rem;
+    top: 31px;
+  }
+  p {
+      margin-bottom: 1rem;
+  }
+  .headline {
+      background: var(--yellow);
+      padding-bottom: 2rem;
+  }
+  .unstyled-link {
+      text-decoration: none;
+      color: var(--black);
+      font-weight: inherit;
+  }
+  a.btn {
+      text-decoration: none;
+      padding: 0.25rem 1rem;
+      background: var(--yellow);
+      color: var(--black);
+      border-radius: 10px;
+      text-transform: uppercase;
+  }
+  a.btn.alt {
+    background: var(--black);
+    color: var(--yellow);
+  }
+  .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(14em, 100%), 1fr));
+      grid-gap: 2rem;
+  }
+  .card.shadow {
+     box-shadow: 8px 8px 0px var(--yellow);
+     transform: translate(0);
+     transition: 0.2s;
+  }
+  .card.border {
+      border: 5px solid var(--yellow);
+
+  }
+  .css-button-arrow--yellow {
+    min-width: 130px;
+    color: var(--black);
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    overflow: hidden;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--yellow);
+  }
+  .css-button-arrow--yellow:hover {
+    border-radius: 5px;
+    padding-right: 24px;
+    padding-left:8px;
+  }
+  .css-button-arrow--yellow:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
+  .css-button-arrow--yellow:after {
+    content: "\00BB";
+    position: absolute;
+    opacity: 0;
+    font-size: 20px;
+    line-height: 40px;
+    top: -4px;
+    right: -20px;
+    transition: 0.4s;
+  }
+  .card.shadow:hover {
+      box-shadow: 11px 12px 0px var(--yellow);
+      cursor: pointer;
+      transform: translate(-2px, -2px);
+      transition: 0.2s;
+  }
+
+  .card .card--content {
+    padding: 1rem;
+  }
+
+  .col-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 1rem;
+  }
+  footer {
+    padding: 1rem 3rem;
+    background: black;
+    color: var(--cream);
+    text-align: center;
+}
+.img-decoration {
+    position: relative;
+    padding: 1rem;
+    border: 5px solid var(--yellow);
+}
+
+  @media screen and (min-width: 992px) {
+    h2 {
+        font-size: 4rem;
+
+      }
+      h2::after {
+        height: 29%;
+        width: 5rem;
+        left: -3.5rem;
+        top: 57px;
+      }
+      .col-2 {
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 4rem;
+          align-items: center;
+      }
+  }
+  @media screen and (min-width: 1400px) {
+    section {
+        padding: 8rem 3rem 0 3rem;
+    }
+    section:last-of-type {
+        padding: 6rem 3rem;
+    }
+
+    h1 {
+        font-size: 6rem;
+      }
+      .subtitle {
+          font-size: 2rem;
+      }
+      section {
+          max-width: 2100px;
+          margin: 0 auto;
+      }
+  }
